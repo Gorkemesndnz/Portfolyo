@@ -217,8 +217,9 @@ function App() {
             <Draggable
               key={`draggable-icon-${w.id}`}
               bounds="parent"
+              disabled={isMobile}
               nodeRef={iconRef as React.RefObject<HTMLDivElement>}
-              position={{ x: w.iconX, y: w.iconY }}
+              position={isMobile ? undefined : { x: w.iconX, y: w.iconY }}
               onStop={(_e: unknown, data: { x: number; y: number }) => {
                 let newX = Math.round(data.x / 90) * 90 + 20;
                 let newY = Math.round(data.y / 90) * 90 + 20;
@@ -242,8 +243,8 @@ function App() {
               <div
                 ref={iconRef as React.RefObject<HTMLDivElement>}
                 className="icon"
+                onClick={() => isMobile && toggleWindow(w.id)}
                 onDoubleClick={() => !isMobile && toggleWindow(w.id)}
-                onTouchEnd={(e) => { e.preventDefault(); toggleWindow(w.id); }}
                 style={{ pointerEvents: 'auto' }}
               >
                 <img src={w.icon} alt={title} />
