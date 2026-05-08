@@ -378,12 +378,18 @@ body, html {
     height: auto !important;
   }
 
-  .window .window-body {
+  .window:not(.lang-modal) .window-body {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 110px);
     max-height: none;
     overflow: hidden;
+  }
+
+  .lang-modal .window-body {
+    display: block;
+    height: auto !important;
+    overflow: visible;
   }
 
   /* İçerik alanı: sadece taşarsa scroll */
