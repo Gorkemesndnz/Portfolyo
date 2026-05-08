@@ -178,7 +178,7 @@ function App() {
       {/* Language Selection Modal */}
       {isLangModalOpen && (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.6)', zIndex: 99999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div className="window" style={{ width: '320px' }}>
+          <div className="window lang-modal" style={{ width: '280px', maxWidth: '90vw' }}>
             <div className="title-bar">
               <div className="title-bar-text">{t.sysPrefs}</div>
             </div>

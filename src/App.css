@@ -355,10 +355,10 @@ body, html {
     font-size: 10px;
   }
 
-  /* Pencereler: tam ekran */
-  .window,
-  .window.maximized,
-  .window:not(.maximized) {
+  /* Pencereler: tam ekran (dil modalı hariç) */
+  .window:not(.lang-modal),
+  .window.maximized:not(.lang-modal),
+  .window:not(.maximized):not(.lang-modal) {
     width: 100vw !important;
     max-width: 100vw !important;
     height: calc(100vh - 36px) !important;
@@ -368,6 +368,14 @@ body, html {
     border-radius: 0 !important;
     position: fixed !important;
     z-index: 100 !important;
+  }
+
+  /* Dil seçim modalı: ortalanmış küçük pencere */
+  .lang-modal {
+    position: relative !important;
+    width: 280px !important;
+    max-width: 90vw !important;
+    height: auto !important;
   }
 
   .window .window-body {
