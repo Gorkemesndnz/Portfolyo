@@ -264,18 +264,18 @@ function App() {
           <Draggable
             key={w.id}
             handle=".title-bar"
-            defaultPosition={{ x: w.x, y: w.y }}
-            disabled={isMax}
+            defaultPosition={isMobile ? { x: 0, y: 0 } : { x: w.x, y: w.y }}
+            disabled={isMax || isMobile}
             onMouseDown={() => handleWindowClick(w.id)}
             nodeRef={nodeRef as React.RefObject<HTMLDivElement>}
           >
             <div
               ref={nodeRef as React.RefObject<HTMLDivElement>}
-              className={`window ${isMax ? 'maximized' : ''}`}
+              className={`window ${isMax || isMobile ? 'maximized' : ''}`}
               style={{
                 position: 'absolute',
-                width: isMax ? '100vw' : w.id.startsWith('project-') ? '520px' : (w.id === 'contact' || w.id === 'about') ? '420px' : '350px',
-                height: isMax ? 'calc(100vh - 30px)' : 'auto',
+                width: (isMax || isMobile) ? '100vw' : w.id.startsWith('project-') ? '520px' : (w.id === 'contact' || w.id === 'about') ? '420px' : '350px',
+                height: (isMax || isMobile) ? 'calc(100vh - 36px)' : 'auto',
                 zIndex: activeWindow === w.id ? 100 : 10,
               }}
               onClick={(e) => { e.stopPropagation(); handleWindowClick(w.id); }}
@@ -289,9 +289,9 @@ function App() {
                   {title}
                 </div>
                 <div className="title-bar-controls">
-                  <button aria-label="Minimize" onClick={(e) => { e.stopPropagation(); minimizeWindow(w.id); }}></button>
-                  <button aria-label={isMax ? "Restore" : "Maximize"} onClick={(e) => { e.stopPropagation(); maximizeWindow(w.id); }}></button>
-                  <button aria-label="Close" onClick={(e) => { e.stopPropagation(); closeWindow(w.id); }}></button>
+                  <button aria-label="Minimize" onClick={(e) => { e.stopPropagation(); minimizeWindow(w.id); }} onTouchEnd={(e) => { e.preventDefault(); e.stopPropagation(); minimizeWindow(w.id); }}></button>
+                  <button aria-label={isMax ? "Restore" : "Maximize"} onClick={(e) => { e.stopPropagation(); maximizeWindow(w.id); }} onTouchEnd={(e) => { e.preventDefault(); e.stopPropagation(); maximizeWindow(w.id); }}></button>
+                  <button aria-label="Close" onClick={(e) => { e.stopPropagation(); closeWindow(w.id); }} onTouchEnd={(e) => { e.preventDefault(); e.stopPropagation(); closeWindow(w.id); }}></button>
                 </div>
               </div>
               <div className="window-body">
