@@ -173,7 +173,7 @@ export function WindowContentRenderer({ id, language, onOpenProject }: WindowCon
         </ul>
       );
       return (
-        <div style={{ width: '100%', maxHeight: '250px', overflowY: 'auto' }}>
+        <div style={{ width: '100%' }}>
           <h4 style={{ margin: '10px 10px 5px', fontSize: '13px', borderBottom: '1px solid #848584', paddingBottom: '4px' }}>{labels.vibeCoding}</h4>
           {renderList(cats.vibeCoding)}
           <h4 style={{ margin: '10px 10px 5px', fontSize: '13px', borderBottom: '1px solid #848584', paddingBottom: '4px' }}>{labels.selfBuilt}</h4>
