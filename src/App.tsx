@@ -24,6 +24,9 @@ function App() {
   const [language, setLanguage] = useState<'tr' | 'en'>('tr');
   const [isLangModalOpen, setIsLangModalOpen] = useState(true);
 
+  // Mobil cihaz tespiti
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 600px)').matches;
+
   const [windows, setWindows] = useState<WindowData[]>([
     {
       id: 'about',
@@ -239,7 +242,8 @@ function App() {
               <div
                 ref={iconRef as React.RefObject<HTMLDivElement>}
                 className="icon"
-                onDoubleClick={() => toggleWindow(w.id)}
+                onDoubleClick={() => !isMobile && toggleWindow(w.id)}
+                onTouchEnd={(e) => { e.preventDefault(); toggleWindow(w.id); }}
                 style={{ pointerEvents: 'auto' }}
               >
                 <img src={w.icon} alt={title} />
