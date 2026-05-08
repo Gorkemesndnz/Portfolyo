@@ -44,8 +44,20 @@ export interface Project {
   name: string;
   /** Kısa açıklama / kullanılan teknolojiler */
   description: string;
+  /** Benzersiz slug — detay penceresi açmak için kullanılır */
+  slug: string;
   /** Opsiyonel: Proje linki */
   url?: string;
+  /** Detaylı proje açıklaması */
+  longDescription?: string;
+  /** Proje görselleri (public klasörüne konulacak, ör: '/projects/slug/1.png') */
+  images?: string[];
+  /** Kullanılan teknolojiler listesi */
+  techStack?: string[];
+  /** Canlı demo linki */
+  liveUrl?: string;
+  /** GitHub repo linki */
+  repoUrl?: string;
 }
 
 export interface ProjectCategories {
@@ -62,22 +74,22 @@ export const projectCategoryLabels = {
 export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
   tr: {
     vibeCoding: [
-      { name: 'Portföy Sitesi', description: 'Windows XP Konseptli — React & TypeScript' },
-      { name: 'EV Rota Optimizasyonu', description: '.NET & React — Elektrikli araç rota planlama' },
+      { name: 'Portföy Sitesi', slug: 'portfolio', description: 'Windows XP Konseptli — React & TypeScript' },
+      { name: 'EV Rota Optimizasyonu', slug: 'ev-route-optimizer', description: '.NET & React — Elektrikli araç rota planlama' },
     ],
     selfBuilt: [
-      { name: 'E-Ticaret Platformu', description: 'React & Node.js' },
-      { name: 'Mobil Uygulama', description: 'React Native' },
+      { name: 'E-Ticaret Platformu', slug: 'e-commerce', description: 'React & Node.js' },
+      { name: 'Mobil Uygulama', slug: 'mobile-app', description: 'React Native' },
     ],
   },
   en: {
     vibeCoding: [
-      { name: 'Portfolio Website', description: 'Windows XP Concept — React & TypeScript' },
-      { name: 'EV Route Optimizer', description: '.NET & React — Electric vehicle route planning' },
+      { name: 'Portfolio Website', slug: 'portfolio', description: 'Windows XP Concept — React & TypeScript' },
+      { name: 'EV Route Optimizer', slug: 'ev-route-optimizer', description: '.NET & React — Electric vehicle route planning' },
     ],
     selfBuilt: [
-      { name: 'E-Commerce Platform', description: 'React & Node.js' },
-      { name: 'Mobile App', description: 'React Native' },
+      { name: 'E-Commerce Platform', slug: 'e-commerce', description: 'React & Node.js' },
+      { name: 'Mobile App', slug: 'mobile-app', description: 'React Native' },
     ],
   },
 };

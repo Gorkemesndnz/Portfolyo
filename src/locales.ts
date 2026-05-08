@@ -25,6 +25,16 @@ export const translations = {
     cvText: 'Özgeçmişimi bilgisayarınıza indirmek veya tarayıcıda görüntülemek için aşağıdaki butonları kullanabilirsiniz.',
     contactDetails: 'İletişim Bilgileri',
 
+    // Proje detay penceresi
+    technologies: 'Teknolojiler',
+    projectInfo: 'Proje Bilgileri',
+    liveDemo: 'Canlı Demo',
+    sourceCode: 'Kaynak Kod',
+    noDetails: 'Bu proje için henüz detay eklenmedi. Yakında güncellenecek!',
+    prevImage: '◀ Önceki',
+    nextImage: 'Sonraki ▶',
+    imageCounter: 'Görsel',
+
     // Dil seçim modalı
     sysPrefs: 'Sistem Ayarları',
     langPrompt: 'Lütfen dil seçiminizi yapın.',
@@ -47,6 +57,16 @@ export const translations = {
     // Content texts
     cvText: 'You can use the buttons below to view my resume in the browser or download it to your computer.',
     contactDetails: 'Contact Details',
+
+    // Project detail window
+    technologies: 'Technologies',
+    projectInfo: 'Project Info',
+    liveDemo: 'Live Demo',
+    sourceCode: 'Source Code',
+    noDetails: 'No details have been added for this project yet. Coming soon!',
+    prevImage: '◀ Previous',
+    nextImage: 'Next ▶',
+    imageCounter: 'Image',
 
     // Language selection modal
     sysPrefs: 'System Preferences',

@@ -2,6 +2,7 @@ import { useState, useRef, createRef } from 'react';
 import Draggable from 'react-draggable';
 import { translations } from './locales';
 import { WindowContentRenderer } from './WindowContents';
+import { projects } from './data';
 import './xp.css';
 import './App.css';
 
@@ -15,6 +16,8 @@ interface WindowData {
   iconX: number;
   iconY: number;
   icon: string;
+  /** Dinamik pencereler için (masaüstü ikonu gösterilmez) */
+  isDynamic?: boolean;
 }
 
 function App() {
@@ -89,7 +92,53 @@ function App() {
       contact: t.contactTitle,
       cv: t.cvTitle
     };
-    return titleMap[id] || id;
+    if (titleMap[id]) return titleMap[id];
+
+    // Proje detay penceresi: slug'dan proje adını bul
+    if (id.startsWith('project-')) {
+      const slug = id.replace('project-', '');
+      const cats = projects[language];
+      const all = [...cats.vibeCoding, ...cats.selfBuilt];
+      const project = all.find(p => p.slug === slug);
+      return project ? `📁 ${project.name}` : id;
+    }
+
+    return id;
+  };
+
+  /** Proje detay penceresi açar — zaten açıksa öne getirir */
+  const openProjectDetail = (slug: string) => {
+    const windowId = `project-${slug}`;
+    const existing = windows.find(w => w.id === windowId);
+
+    if (existing) {
+      // Zaten açıksa öne getir
+      setWindows(windows.map(w => w.id === windowId ? { ...w, isOpen: true, isMinimized: false } : w));
+      setActiveWindow(windowId);
+      return;
+    }
+
+    // Kademeli pozisyonlama: açık dinamik pencere sayısına göre kaydır
+    const dynamicCount = windows.filter(w => w.isDynamic && w.isOpen).length;
+    const offsetX = 180 + dynamicCount * 30;
+    const offsetY = 60 + dynamicCount * 30;
+
+    const newWindow: WindowData = {
+      id: windowId,
+      isOpen: true,
+      isMinimized: false,
+      isMaximized: false,
+      x: offsetX,
+      y: offsetY,
+      iconX: -100,
+      iconY: -100,
+      icon: '/icons/directory_open_file_mydocs-4.png',
+      isDynamic: true,
+    };
+
+    setWindows(prev => [...prev, newWindow]);
+    setActiveWindow(windowId);
+    setIsStartMenuOpen(false);
   };
 
   const toggleWindow = (id: string) => {
@@ -156,9 +205,9 @@ function App() {
         </div>
       )}
 
-      {/* Desktop Icons */}
+      {/* Desktop Icons — sadece sabit pencereler için */}
       <div className="desktop-icons">
-        {windows.map(w => {
+        {windows.filter(w => !w.isDynamic).map(w => {
           const iconRef = iconRefs.current[w.id];
           const title = getWindowTitle(w.id);
           return (
@@ -220,7 +269,7 @@ function App() {
               className={`window ${isMax ? 'maximized' : ''}`}
               style={{
                 position: 'absolute',
-                width: isMax ? '100vw' : (w.id === 'contact' || w.id === 'about') ? '420px' : '350px',
+                width: isMax ? '100vw' : w.id.startsWith('project-') ? '520px' : (w.id === 'contact' || w.id === 'about') ? '420px' : '350px',
                 height: isMax ? 'calc(100vh - 30px)' : 'auto',
                 zIndex: activeWindow === w.id ? 100 : 10,
               }}
@@ -241,7 +290,7 @@ function App() {
                 </div>
               </div>
               <div className="window-body">
-                <WindowContentRenderer id={w.id} language={language} />
+                <WindowContentRenderer id={w.id} language={language} onOpenProject={openProjectDetail} />
                 <section className="field-row" style={{ justifyContent: 'flex-end', marginTop: '15px' }}>
                   <button onClick={() => closeWindow(w.id)}>{t.close}</button>
                 </section>
