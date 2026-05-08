@@ -211,9 +211,23 @@ export function WindowContentRenderer({ id, language, onOpenProject }: WindowCon
             <a href={cv.filePath} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
               <button style={{ padding: '5px 15px', cursor: 'pointer' }}>{t.view}</button>
             </a>
-            <a href={cv.filePath} download={cv.downloadFileName} style={{ textDecoration: 'none' }}>
-              <button style={{ padding: '5px 15px', fontWeight: 'bold', cursor: 'pointer' }}>{t.download}</button>
-            </a>
+            <button
+              style={{ padding: '5px 15px', fontWeight: 'bold', cursor: 'pointer' }}
+              onClick={() => {
+                fetch(cv.filePath)
+                  .then(res => res.blob())
+                  .then(blob => {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = cv.downloadFileName;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                  });
+              }}
+            >{t.download}</button>
           </div>
         </div>
       );

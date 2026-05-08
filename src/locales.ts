@@ -19,7 +19,7 @@ export const translations = {
     start: 'Başlat',
     close: 'Kapat',
     view: 'Görüntüle',
-    download: 'Bilgisayara İndir',
+    download: 'İndir',
 
     // İçerik metinleri
     cvText: 'Özgeçmişimi bilgisayarınıza indirmek veya tarayıcıda görüntülemek için aşağıdaki butonları kullanabilirsiniz.',
@@ -52,7 +52,7 @@ export const translations = {
     start: 'Start',
     close: 'Close',
     view: 'View',
-    download: 'Download to PC',
+    download: 'Download',
 
     // Content texts
     cvText: 'You can use the buttons below to view my resume in the browser or download it to your computer.',
