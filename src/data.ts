@@ -78,18 +78,19 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
       { name: 'EV Rota Optimizasyonu', slug: 'ev-route-optimizer', description: '.NET & React — Elektrikli araç rota planlama' },
     ],
     selfBuilt: [
-      { name: 'E-Ticaret Platformu', slug: 'e-commerce', description: 'React & Node.js' },
-      { name: 'Mobil Uygulama', slug: 'mobile-app', description: 'React Native' },
+      { name: 'Hisse Senedi Analizi', slug: 'stock-analysis', description: 'Java, Spring Boot' },
+      { name: 'Neurocine', slug: 'neurocine', description: 'Java, XML' },
     ],
   },
+  //english
   en: {
     vibeCoding: [
       { name: 'Portfolio Website', slug: 'portfolio', description: 'Windows XP Concept — React & TypeScript' },
-      { name: 'EV Route Optimizer', slug: 'ev-route-optimizer', description: '.NET & React — Electric vehicle route planning' },
+      { name: 'EV Route Optimizer', slug: 'ev-route-optimizer', description: '.NET & React & Python — Electric vehicle route planning' },
     ],
     selfBuilt: [
-      { name: 'E-Commerce Platform', slug: 'e-commerce', description: 'React & Node.js' },
-      { name: 'Mobile App', slug: 'mobile-app', description: 'React Native' },
+      { name: 'Stock Market Analysis', slug: 'stock-analysis', description: 'Java, Spring Boot' },
+      { name: 'Neurocine', slug: 'neurocine', description: 'Java, XML' },
     ],
   },
 };
