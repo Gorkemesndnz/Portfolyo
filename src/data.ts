@@ -76,6 +76,7 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
     vibeCoding: [
       { name: 'Portföy Sitesi', slug: 'portfolio', description: 'Windows XP Konseptli — React & TypeScript' },
       { name: 'EV Rota Optimizasyonu', slug: 'ev-route-optimizer', description: '.NET & React — Elektrikli araç rota planlama' },
+      { name: 'Kansızlık Tanısında Anemi', slug: 'anemia-diagnosis', description: 'Python' },
     ],
     selfBuilt: [
       { name: 'Hisse Senedi Analizi', slug: 'stock-analysis', description: 'Java, Spring Boot' },
@@ -87,6 +88,7 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
     vibeCoding: [
       { name: 'Portfolio Website', slug: 'portfolio', description: 'Windows XP Concept — React & TypeScript' },
       { name: 'EV Route Optimizer', slug: 'ev-route-optimizer', description: '.NET & React & Python — Electric vehicle route planning' },
+      { name: 'Anemia Diagnosis', slug: 'anemia-diagnosis', description: 'Python' },
     ],
     selfBuilt: [
       { name: 'Stock Market Analysis', slug: 'stock-analysis', description: 'Java, Spring Boot' },
