@@ -380,6 +380,13 @@ body, html {
   .start-button {
     padding: 0 12px 0 8px;
     font-size: 13px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .start-button:active,
+  .start-button:focus {
+    background: linear-gradient(to bottom, #205c26 0%, #368e42 10%, #368e42 90%, #46b256 100%) !important;
+    outline: none;
   }
 
   .start-button img {
