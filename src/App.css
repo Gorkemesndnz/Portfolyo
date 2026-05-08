@@ -371,9 +371,24 @@ body, html {
   }
 
   .window .window-body {
+    display: flex;
+    flex-direction: column;
     height: calc(100vh - 110px);
     max-height: none;
+    overflow: hidden;
+  }
+
+  /* İçerik alanı: sadece taşarsa scroll */
+  .window .window-body > *:first-child {
+    flex: 1;
     overflow-y: auto;
+    min-height: 0;
+  }
+
+  /* Kapat butonu: her zaman en altta */
+  .window .window-body > .field-row {
+    flex-shrink: 0;
+    padding: 8px 0;
   }
 
   /* Taskbar: her zaman görünür */
