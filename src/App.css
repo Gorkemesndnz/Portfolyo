@@ -12,7 +12,7 @@ body, html {
   width: 100vw;
   height: 100vh;
   background-color: #004E98;
-  background-image: url('/bliss.png');
+  background-image: url('/bliss.webp');
   background-size: cover;
   background-position: center;
   position: relative;
