@@ -27,6 +27,9 @@ function App() {
   // Mobil cihaz tespiti
   const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 600px)').matches;
 
+  // Dokunmatik cihaz tespiti (Tabletler ve dokunmatik ekranlı bilgisayarlar için)
+  const isTouchDevice = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
   const [windows, setWindows] = useState<WindowData[]>([
     {
       id: 'about',
@@ -217,7 +220,7 @@ function App() {
             <Draggable
               key={`draggable-icon-${w.id}`}
               bounds="parent"
-              disabled={isMobile}
+              disabled={isMobile || isTouchDevice}
               nodeRef={iconRef as React.RefObject<HTMLDivElement>}
               position={isMobile ? undefined : { x: w.iconX, y: w.iconY }}
               onStop={(_e: unknown, data: { x: number; y: number }) => {
@@ -243,8 +246,8 @@ function App() {
               <div
                 ref={iconRef as React.RefObject<HTMLDivElement>}
                 className="icon"
-                onClick={() => isMobile && toggleWindow(w.id)}
-                onDoubleClick={() => !isMobile && toggleWindow(w.id)}
+                onClick={() => (isMobile || isTouchDevice) && toggleWindow(w.id)}
+                onDoubleClick={() => !(isMobile || isTouchDevice) && toggleWindow(w.id)}
                 style={{ pointerEvents: 'auto' }}
               >
                 <img src={w.icon} alt={title} />
