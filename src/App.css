@@ -325,6 +325,65 @@ body, html {
   color: #fff !important;
 }
 
+
+/* Phone Mockup Frame for Mobile Apps */
+.phone-mockup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background: #f0f0f0;
+  border: 2px solid;
+  border-color: #848584 #fff #fff #848584;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.phone-mockup {
+  width: 150px;
+  height: 280px;
+  background: #111;
+  border-radius: 18px;
+  border: 4px solid #333;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 6px 4px;
+  box-sizing: border-box;
+}
+
+.phone-speaker {
+  width: 30px;
+  height: 3px;
+  background: #444;
+  border-radius: 2px;
+  margin: 0 auto 5px;
+}
+
+.phone-screen {
+  flex: 1;
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid #000;
+  position: relative;
+}
+
+.phone-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone-home-button {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #444;
+  border-radius: 50%;
+  margin: 5px auto 0;
+}
+
 /* ============================================ */
 /* Mobil Responsive                             */
 /* ============================================ */
@@ -469,5 +528,30 @@ body, html {
 
   .project-gallery-viewport {
     height: 150px;
+  }
+
+  .phone-mockup-wrapper {
+    height: 220px;
+    padding: 5px;
+  }
+
+  .phone-mockup {
+    width: 110px;
+    height: 200px;
+    border-radius: 12px;
+    border-width: 2px;
+    padding: 4px 2px;
+  }
+
+  .phone-speaker {
+    width: 20px;
+    height: 2px;
+    margin-bottom: 3px;
+  }
+
+  .phone-home-button {
+    width: 10px;
+    height: 10px;
+    margin-top: 3px;
   }
 }

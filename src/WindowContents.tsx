@@ -16,7 +16,7 @@ function findProjectBySlug(slug: string, language: LanguageCode): Project | unde
 }
 
 /** XP tarzı görsel galerisi bileşeni */
-function ProjectGallery({ images, language }: { images: string[]; language: LanguageCode }) {
+function ProjectGallery({ images, language, isMobileApp }: { images: string[]; language: LanguageCode; isMobileApp?: boolean }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const t = translations[language];
 
@@ -24,14 +24,30 @@ function ProjectGallery({ images, language }: { images: string[]; language: Lang
   const next = () => setCurrentIndex(i => (i === images.length - 1 ? 0 : i + 1));
 
   return (
-    <div className="project-gallery">
-      <div className="project-gallery-viewport">
-        <img
-          src={images[currentIndex]}
-          alt={`${t.imageCounter} ${currentIndex + 1}`}
-          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-        />
-      </div>
+    <div className={`project-gallery ${isMobileApp ? 'mobile-app-gallery' : ''}`}>
+      {isMobileApp ? (
+        <div className="phone-mockup-wrapper">
+          <div className="phone-mockup">
+            <div className="phone-speaker"></div>
+            <div className="phone-screen">
+              <img
+                src={images[currentIndex]}
+                alt={`${t.imageCounter} ${currentIndex + 1}`}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </div>
+            <div className="phone-home-button"></div>
+          </div>
+        </div>
+      ) : (
+        <div className="project-gallery-viewport">
+          <img
+            src={images[currentIndex]}
+            alt={`${t.imageCounter} ${currentIndex + 1}`}
+            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+          />
+        </div>
+      )}
       <div className="project-gallery-nav">
         <button onClick={prev} disabled={images.length <= 1}>{t.prevImage}</button>
         <span style={{ fontSize: '11px', color: '#444' }}>
@@ -73,7 +89,7 @@ function ProjectDetailContent({ slug, language }: { slug: string; language: Lang
         <>
           {/* Görsel galerisi */}
           {project.images && project.images.length > 0 && (
-            <ProjectGallery images={project.images} language={language} />
+            <ProjectGallery images={project.images} language={language} isMobileApp={project.isMobileApp} />
           )}
 
           {/* Detaylı açıklama */}
