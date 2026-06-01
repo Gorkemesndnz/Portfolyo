@@ -80,7 +80,14 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
     ],
     selfBuilt: [
       { name: 'Hisse Senedi Analizi', slug: 'stock-analysis', description: 'Java, Spring Boot' },
-      { name: 'Neurocine', slug: 'neurocine', description: 'Java, XML' },
+      {
+        name: 'Neurocine',
+        slug: 'neurocine',
+        description: 'Java, XML — Gemini Entegrasyonlu Film/Dizi Öneri Mobil Uygulaması',
+        longDescription: 'Material Design 3 bileşenlerine sadık kalınarak Java ve XML ile geliştirilmiş modern bir Android mobil uygulamasıdır. Gemini entegrasyonu sayesinde kullanıcılara kişiselleştirilmiş film ve dizi önerileri sunar. Kullanıcı kimlik doğrulama (auth) ve veritabanı (db) işlemleri için Firebase altyapısı (Firebase Authentication ve Firestore/Realtime DB) kullanılmıştır.',
+        techStack: ['Android Studio', 'Java', 'XML Layouts', 'Material Design 3', 'Gemini API', 'Firebase Auth', 'Firebase Database'],
+        images: ['/projects/neurocine/1.png', '/projects/neurocine/2.png']
+      },
     ],
   },
   //english
@@ -92,7 +99,14 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
     ],
     selfBuilt: [
       { name: 'Stock Market Analysis', slug: 'stock-analysis', description: 'Java, Spring Boot' },
-      { name: 'Neurocine', slug: 'neurocine', description: 'Java, XML' },
+      {
+        name: 'Neurocine',
+        slug: 'neurocine',
+        description: 'Java, XML — Gemini Integrated Movie/Show Recommendation Mobile App',
+        longDescription: 'A modern Android mobile application developed with Java and XML, adhering to Material Design 3 guidelines. It offers personalized movie and TV show recommendations through Gemini AI integration. Uses Firebase for Authentication and Database services.',
+        techStack: ['Android Studio', 'Java', 'XML Layouts', 'Material Design 3', 'Gemini API', 'Firebase Auth', 'Firebase Database'],
+        images: ['/projects/neurocine/1.png', '/projects/neurocine/2.png']
+      },
     ],
   },
 };
