@@ -79,7 +79,14 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
       { name: 'Kansızlık Tanısında Anemi', slug: 'anemia-diagnosis', description: 'Python' },
     ],
     selfBuilt: [
-      { name: 'Hisse Senedi Analizi', slug: 'stock-analysis', description: 'Java, Spring Boot' },
+      {
+        name: 'AuraFinance',
+        slug: 'aurafinance',
+        description: 'Java, Spring Boot — Yapay Zeka Destekli Portföy Yönetim Platformu',
+        longDescription: 'Ortaklaşa geliştirilmiş bir grup projesidir (takım çalışması). Farklı borsalardaki finansal varlıkları (kripto, hisse senedi, döviz, altın vb.) tek bir merkezde toplayarak gerçek zamanlı portföy yönetimi sunar. Google Gemini 2.5-Flash entegrasyonu sayesinde veri gizliliği standartlarına uygun biçimde akıllı finansal analizler ve yatırım önerileri üretir. Performans optimizasyonu için Redis önbellekleme mimarisi ve C3P0 bağlantı havuzu barındırır. Web katmanı güvenilirliği ise Spring Test (MockMvc), Mockito ve JUnit 5 ile test edilmiştir.',
+        techStack: ['Java 18', 'Spring Boot', 'MySQL', 'Hibernate (JPA)', 'Redis Caching', 'Gemini AI API', 'Spring Security', 'C3P0', 'JUnit 5 & Mockito'],
+        images: ['/projects/aurafinance/1.png', '/projects/aurafinance/2.png', '/projects/aurafinance/3.png', '/projects/aurafinance/4.png', '/projects/aurafinance/5.png']
+      },
       {
         name: 'Neurocine',
         slug: 'neurocine',
@@ -98,7 +105,14 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
       { name: 'Anemia Diagnosis', slug: 'anemia-diagnosis', description: 'Python' },
     ],
     selfBuilt: [
-      { name: 'Stock Market Analysis', slug: 'stock-analysis', description: 'Java, Spring Boot' },
+      {
+        name: 'AuraFinance',
+        slug: 'aurafinance',
+        description: 'Java, Spring Boot — AI-Powered Portfolio Management Platform',
+        longDescription: 'A collaborative group project (teamwork) developed using advanced Java technologies. It aggregates financial assets from various markets (crypto, stocks, fiat currencies, gold) into a single dashboard for real-time portfolio management. Integrates Google Gemini 2.5-Flash to generate privacy-focused financial insights and investment recommendations. Features performance optimizations including Redis caching and C3P0 connection pooling. The web layer reliability is validated using Spring Test (MockMvc), Mockito, and JUnit 5.',
+        techStack: ['Java 18', 'Spring Boot', 'MySQL', 'Hibernate (JPA)', 'Redis Caching', 'Gemini AI API', 'Spring Security', 'C3P0', 'JUnit 5 & Mockito'],
+        images: ['/projects/aurafinance/1.png', '/projects/aurafinance/2.png', '/projects/aurafinance/3.png', '/projects/aurafinance/4.png', '/projects/aurafinance/5.png']
+      },
       {
         name: 'Neurocine',
         slug: 'neurocine',
