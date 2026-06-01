@@ -74,7 +74,14 @@ export const projectCategoryLabels = {
 export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
   tr: {
     vibeCoding: [
-      { name: 'Portföy Sitesi', slug: 'portfolio', description: 'Windows XP Konseptli — React & TypeScript' },
+      {
+        name: 'Portföy Sitesi',
+        slug: 'portfolio',
+        description: 'Windows XP Konseptli — React & TypeScript',
+        longDescription: 'React ve TypeScript kullanılarak geliştirilmiş, retro Windows XP temasını modern web teknolojileriyle birleştiren interaktif bir kişisel portföy web sitesidir. Kullanıcılara tanıdık bir masaüstü deneyimi sunmak amacıyla pencerelerin sürüklenebilmesi (Draggable), büyütülüp küçültülmesi, dil seçeneği (Türkçe & İngilizce), başlat menüsü ve özelleştirilmiş pencereler gibi özellikler barındırır.',
+        techStack: ['React', 'TypeScript', 'Vite', 'CSS3', 'xp.css', 'react-draggable'],
+        images: ['/projects/portfolio/1.png', '/projects/portfolio/2.png']
+      },
       { name: 'EV Rota Optimizasyonu', slug: 'ev-route-optimizer', description: '.NET & React — Elektrikli araç rota planlama' },
       { name: 'Kansızlık Tanısında Anemi', slug: 'anemia-diagnosis', description: 'Python' },
     ],
@@ -100,7 +107,14 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
   //english
   en: {
     vibeCoding: [
-      { name: 'Portfolio Website', slug: 'portfolio', description: 'Windows XP Concept — React & TypeScript' },
+      {
+        name: 'Portfolio Website',
+        slug: 'portfolio',
+        description: 'Windows XP Concept — React & TypeScript',
+        longDescription: 'An interactive personal portfolio website developed using React and TypeScript, combining a retro Windows XP theme with modern web technologies. Provides a familiar desktop experience for users, featuring draggable and resizable windows, localization (Turkish & English), a start menu, and custom themed windows.',
+        techStack: ['React', 'TypeScript', 'Vite', 'CSS3', 'xp.css', 'react-draggable'],
+        images: ['/projects/portfolio/1.png', '/projects/portfolio/2.png']
+      },
       { name: 'EV Route Optimizer', slug: 'ev-route-optimizer', description: '.NET & React & Python — Electric vehicle route planning' },
       { name: 'Anemia Diagnosis', slug: 'anemia-diagnosis', description: 'Python' },
     ],
