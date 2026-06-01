@@ -84,8 +84,8 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
         name: 'Neurocine',
         slug: 'neurocine',
         description: 'Java, XML — Gemini Entegrasyonlu Film/Dizi Öneri Mobil Uygulaması',
-        longDescription: 'Material Design 3 bileşenlerine sadık kalınarak Java ve XML ile geliştirilmiş modern bir Android mobil uygulamasıdır. Gemini entegrasyonu sayesinde kullanıcılara kişiselleştirilmiş film ve dizi önerileri sunar. Kullanıcı kimlik doğrulama (auth) ve veritabanı (db) işlemleri için Firebase altyapısı (Firebase Authentication ve Firestore/Realtime DB) kullanılmıştır.',
-        techStack: ['Android Studio', 'Java', 'XML Layouts', 'Material Design 3', 'Gemini API', 'Firebase Auth', 'Firebase Database'],
+        longDescription: 'Material Design 3 bileşenlerine sadık kalınarak Java ve XML ile geliştirilmiş modern bir Android mobil uygulamasıdır. Gemini entegrasyonu sayesinde kullanıcılara kişiselleştirilmiş film ve dizi önerileri sunar. Kullanıcı kimlik doğrulama işlemleri için Firebase Authentication, veri yönetimi ve depolama için ise Cloud Firestore kullanılmıştır.',
+        techStack: ['Android Studio', 'Java', 'XML Layouts', 'Material Design 3', 'Gemini API', 'Firebase Auth', 'Cloud Firestore'],
         images: ['/projects/neurocine/1.png', '/projects/neurocine/2.png']
       },
     ],
@@ -103,8 +103,8 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
         name: 'Neurocine',
         slug: 'neurocine',
         description: 'Java, XML — Gemini Integrated Movie/Show Recommendation Mobile App',
-        longDescription: 'A modern Android mobile application developed with Java and XML, adhering to Material Design 3 guidelines. It offers personalized movie and TV show recommendations through Gemini AI integration. Uses Firebase for Authentication and Database services.',
-        techStack: ['Android Studio', 'Java', 'XML Layouts', 'Material Design 3', 'Gemini API', 'Firebase Auth', 'Firebase Database'],
+        longDescription: 'A modern Android mobile application developed with Java and XML, adhering to Material Design 3 guidelines. It offers personalized movie and TV show recommendations through Gemini AI integration. Uses Firebase Authentication for user authentication and Cloud Firestore for database services.',
+        techStack: ['Android Studio', 'Java', 'XML Layouts', 'Material Design 3', 'Gemini API', 'Firebase Auth', 'Cloud Firestore'],
         images: ['/projects/neurocine/1.png', '/projects/neurocine/2.png']
       },
     ],
