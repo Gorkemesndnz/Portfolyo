@@ -331,7 +331,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 360px;
   background: #f0f0f0;
   border: 2px solid;
   border-color: #848584 #fff #fff #848584;
@@ -341,7 +341,7 @@ body, html {
 
 .phone-mockup {
   width: 150px;
-  height: 280px;
+  height: auto;
   background: #111;
   border-radius: 18px;
   border: 4px solid #333;
@@ -349,7 +349,7 @@ body, html {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 6px 4px;
+  padding: 8px 6px;
   box-sizing: border-box;
 }
 
@@ -362,9 +362,10 @@ body, html {
 }
 
 .phone-screen {
-  flex: 1;
+  width: 100%;
+  aspect-ratio: 9 / 20;
   background: #000;
-  border-radius: 3px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid #000;
   position: relative;
@@ -536,8 +537,8 @@ body, html {
   }
 
   .phone-mockup {
-    width: 110px;
-    height: 200px;
+    width: 90px;
+    height: auto;
     border-radius: 12px;
     border-width: 2px;
     padding: 4px 2px;
