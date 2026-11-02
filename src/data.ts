@@ -89,6 +89,22 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
     ],
     selfBuilt: [
       {
+        name: 'Büyük Adım Eğitim Kurumu',
+        slug: 'buyuk-adim',
+        description: 'Next.js 16, React 19 & Sanity CMS — Özel Eğitim & Rehabilitasyon Kurumsal Web Sitesi',
+        longDescription: 'Büyük Adım Özel Eğitim ve Rehabilitasyon Merkezi için geliştirilmiş modern, kurumsal, yüksek performanslı ve SEO/erişilebilirlik (A11y) standartlarına tam uyumlu web platformudur. İçerik yönetimi için headless Sanity Studio entegre edilmiştir. Dinamik hizmet sayfaları, uzman kadro rehberi, fotoğraf ve video galerisi, blog/rehber makaleleri ve Cloudflare Turnstile ile korunan güvenli iletişim formu içermektedir.',
+        techStack: ['Next.js 16 (App Router)', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Sanity Studio CMS', 'Framer Motion', 'Zod', 'Cloudflare Turnstile', 'Web3Forms', 'Vitest & Playwright'],
+        images: [
+          '/projects/buyukadim/1.png',
+          '/projects/buyukadim/2.png',
+          '/projects/buyukadim/3.png',
+          '/projects/buyukadim/4.png',
+          '/projects/buyukadim/5.png'
+        ],
+        liveUrl: 'https://buyukadimrehabilitasyon.com',
+        repoUrl: 'https://github.com/Gorkemesndnz/BuyukAdimEgitimKurumuKurumsalWebSitesi'
+      },
+      {
         name: 'AuraFinance',
         slug: 'aurafinance',
         description: 'Java, Spring Boot — Yapay Zeka Destekli Portföy Yönetim Platformu',
@@ -122,6 +138,22 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
       { name: 'Anemia Diagnosis', slug: 'anemia-diagnosis', description: 'Python' },
     ],
     selfBuilt: [
+      {
+        name: 'Büyük Adım Education Center',
+        slug: 'buyuk-adim',
+        description: 'Next.js 16, React 19 & Sanity CMS — Special Education & Rehabilitation Corporate Portal',
+        longDescription: 'A modern, high-performance, accessible, and SEO-optimized corporate web platform developed for Büyük Adım Special Education and Rehabilitation Center. Integrates headless Sanity Studio for dynamic content management. Features dynamic education & rehabilitation service pages, specialist team directory, interactive media gallery, blog/resource articles, and a secured contact form protected with Cloudflare Turnstile.',
+        techStack: ['Next.js 16 (App Router)', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Sanity Studio CMS', 'Framer Motion', 'Zod', 'Cloudflare Turnstile', 'Web3Forms', 'Vitest & Playwright'],
+        images: [
+          '/projects/buyukadim/1.png',
+          '/projects/buyukadim/2.png',
+          '/projects/buyukadim/3.png',
+          '/projects/buyukadim/4.png',
+          '/projects/buyukadim/5.png'
+        ],
+        liveUrl: 'https://buyukadimrehabilitasyon.com',
+        repoUrl: 'https://github.com/Gorkemesndnz/BuyukAdimEgitimKurumuKurumsalWebSitesi'
+      },
       {
         name: 'AuraFinance',
         slug: 'aurafinance',
