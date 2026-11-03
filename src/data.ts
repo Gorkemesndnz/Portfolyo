@@ -89,6 +89,20 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
     ],
     selfBuilt: [
       {
+        name: 'UAB Sınav Sonuç Sistemi',
+        slug: 'uab',
+        description: 'Java 25, Spring Boot 3 & React — T.C. Ulaştırma ve Altyapı Bakanlığı Sınav & Sonuç Platformu',
+        longDescription: 'T.C. Ulaştırma ve Altyapı Bakanlığı için geliştirilmiş güvenli Sınav Sonuç Yönetim ve Görüntüleme Sistemi. Yönetici ve aday olmak üzere iki farklı rol sunar; yöneticiler sınav tanımlama, sonuç kaydetme, düzenleme, silme ve Excel ile toplu içe aktarma işlemlerini gerçekleştirebilirken, adaylar TC kimlik ve şifreleriyle kendi sınav sonuçlarını görüntüleyebilmektedir. KVKK ve veri güvenliği standartları doğrultusunda TC kimlik numaraları veritabanında AES-256 ile şifreli ve HMAC tabanlı kör dizinleme (blind index) ile aranabilir olarak saklanır. Sistem; JWT tabanlı oturum yönetimi, Flyway veritabanı versiyonlama, işlem denetim kayıtları (audit logging) ve API hız sınırlama mekanizmaları barındırır.',
+        techStack: ['Java 25', 'Spring Boot 3', 'PostgreSQL 16', 'Flyway Migrations', 'React', 'Vite', 'Docker & Docker Compose', 'Spring Security', 'JWT Auth', 'AES-256 & HMAC', 'Mantine UI', 'Apache POI'],
+        images: [
+          '/projects/uab/1.png',
+          '/projects/uab/2.png',
+          '/projects/uab/3.png',
+          '/projects/uab/4.png',
+          '/projects/uab/5.png'
+        ]
+      },
+      {
         name: 'Büyük Adım Eğitim Kurumu',
         slug: 'buyuk-adim',
         description: 'Next.js 16, React 19 & Sanity CMS — Özel Eğitim & Rehabilitasyon Kurumsal Web Sitesi',
@@ -138,6 +152,20 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
       { name: 'Anemia Diagnosis', slug: 'anemia-diagnosis', description: 'Python' },
     ],
     selfBuilt: [
+      {
+        name: 'UAB Exam Result System',
+        slug: 'uab',
+        description: 'Java 25, Spring Boot 3 & React — Ministry of Transport & Infrastructure Exam Platform',
+        longDescription: 'A secure Exam Result Management and Display System developed for the Republic of Turkey Ministry of Transport and Infrastructure. Provides distinct roles for administrators and candidates: administrators manage exams, results, bulk Excel imports, and monitor audit trails, while candidates securely view personal exam records. Built adhering to high data privacy and security standards, national ID numbers (TCKN) are encrypted in PostgreSQL using AES-256 alongside HMAC blind indexing for fast searchable lookups. Features JWT authentication, Flyway schema migrations, and API rate limiting.',
+        techStack: ['Java 25', 'Spring Boot 3', 'PostgreSQL 16', 'Flyway Migrations', 'React', 'Vite', 'Docker & Docker Compose', 'Spring Security', 'JWT Auth', 'AES-256 & HMAC', 'Mantine UI', 'Apache POI'],
+        images: [
+          '/projects/uab/1.png',
+          '/projects/uab/2.png',
+          '/projects/uab/3.png',
+          '/projects/uab/4.png',
+          '/projects/uab/5.png'
+        ]
+      },
       {
         name: 'Büyük Adım Education Center',
         slug: 'buyuk-adim',
