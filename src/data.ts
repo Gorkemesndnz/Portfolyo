@@ -98,8 +98,7 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
           '/projects/uab/1.png',
           '/projects/uab/2.png',
           '/projects/uab/3.png',
-          '/projects/uab/4.png',
-          '/projects/uab/5.png'
+          '/projects/uab/4.png'
         ]
       },
       {
@@ -162,8 +161,7 @@ export const projects: { tr: ProjectCategories; en: ProjectCategories } = {
           '/projects/uab/1.png',
           '/projects/uab/2.png',
           '/projects/uab/3.png',
-          '/projects/uab/4.png',
-          '/projects/uab/5.png'
+          '/projects/uab/4.png'
         ]
       },
       {
